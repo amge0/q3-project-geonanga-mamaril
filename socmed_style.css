@@ -1,0 +1,61 @@
+.topnav {
+  font-family: Noto Sans, sans-serif;
+  font-weight: normal;
+  background-color: #f4e3ff;
+  overflow: hidden;
+  background: #e0dfe8;
+  color: black;
+}
+
+.topnav a {
+  float: left;
+  color: #f4e3ff;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+}
+
+.topnav a:hover {
+  background-color: #f4e3ff;
+  color: black;
+  font-weight: bold;
+}
+
+button {
+  font-family: Noto Sans, sans-serif;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+  width: 100%;
+}
+      
+#header {
+  text-align: center;
+  line-height: 5px;
+}
+
+h1 {
+  font-family: Helvetica, serif;
+  font-size: 300%;
+  padding: 10px;
+}
+
+h2 {
+  font-family: Noto Sans, sans-serif;
+  font-weight: normal;
+}
+
+#description {
+  height: 200%;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  font-family: Noto Sans, sans-serif;
+}

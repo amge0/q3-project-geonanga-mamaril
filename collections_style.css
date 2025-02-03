@@ -1,0 +1,107 @@
+* {
+  background: #e0dfe8;
+}
+
+.topnav {
+  font-family: Noto Sans, sans-serif;
+  font-weight: normal;
+  background-color: #f4e3ff;
+  overflow: hidden;
+  color: black;
+}
+
+.topnav a {
+  float: left;
+  color: #f4e3ff;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+}
+
+.topnav a:hover {
+  background-color: #f4e3ff;
+  color: black;
+  font-weight: bold;
+}
+
+button {
+  font-family: Noto Sans, sans-serif;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+  width: 100%;
+}
+
+body {
+  font-family: Times New Roman, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E6E6FA;
+}
+      
+header {
+  font-family: Helvetica, serif;
+  font-size: 250%;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#main-container {
+  width: 80%;
+  text-align: center;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.image-grid div {
+  border: 2px solid black;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recent-room {
+  border: 2px solid black;
+  height: 200px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: gray;
+}

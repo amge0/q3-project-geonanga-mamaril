@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Comfort Zone</title>
+    <link href="bookmarks_style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" type="image/x-icon"/>
+  
+  <div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="customize.html">Customize</a>
+    <a href="drafts.html">Drafts</a>
+  </div>
+    
+  <script>
+    function showBookmarksPage() {
+      const container = document.createElement("div");
+        container.innerHTML = `
+          <header>
+            COMFORT ZONE<br />
+            <span style="font-size: 16px;">Featured rooms</span>
+          </header>
+          
+          <div id="main-container">
+            <div class="featured-room">
+              Image of most favorite room created
+            </div>
+          
+          <div class="image-grid">
+              <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/room1.jpg?v=1737641388373" width="200" height="200" alt="Zoomable Image" class="zoomable">
+              <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/room3.jpg?v=1737641564335" width="200" height="200" alt="Zoomable Image" class="zoomable">
+              <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/room2.jpg?v=1737641559432" width="200" height="200" alt="Zoomable Image" class="zoomable">
+              <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/room4.jpg?v=1737642005105" width="200" height="200 alt="Zoomable Image" class="zoomable">
+              
+            </div>
+
+            <div class="footer">copyright and sources</div>
+          </div>
+          `;
+        document.body.appendChild(container);
+    }
+  </script>
+    </head>
+  <body>
+    <button onclick="showBookmarksPage()">📌 Bookmarks</button>
+  </body>
+</html>
