@@ -1,6 +1,3 @@
-* {
-  background: #e0dfe8;
-}
 
 #header {
   text-align: center;
@@ -57,4 +54,11 @@ footer {
   background-color: #a6a6a6;
   font-size: 14px;
   font-family: Noto Sans, sans-serif;
+}
+body {
+  background-image: url('https://i.pinimg.com/736x/12/63/a9/1263a944c273ce91048355b916291b2f.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
