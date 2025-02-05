@@ -98,8 +98,7 @@ header {
 }
 
 .zoomable {
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .zoomable:hover {
