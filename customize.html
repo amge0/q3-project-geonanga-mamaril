@@ -6,13 +6,6 @@
     <title>Comfort Zone</title>
     <link href="customize_style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" type="image/x-icon"/>
-</head>
-<body>
-
-    <h1>COMFORT ZONE</h1>
-    <div class="container">
-        <h2>Customization</h2>
-
     <div class="topnav">
         <a class="active" href="index.html">Home</a>
         <a href="collections.html">Collections</a>
@@ -20,6 +13,8 @@
         <a href="drafts.html">Drafts</a>
         <a href="socmed.html">Social Media</a>
     </div>
+</head>
+<body>
         
         <!-- Left Buttons -->
         <div class="side-buttons left-buttons">
@@ -64,9 +59,9 @@
         document.addEventListener("DOMContentLoaded", loadSavedImages);
 
         const imageCategories = {
-            furnitures: ["furniture1.png", "furniture2.png", "furniture3.png"],
-            lights: ["light1.png", "light2.png", "light3.png"],
-            decoration: ["deco1.png", "deco2.png", "deco3.png"]
+            furnitures: ["furniture1.png", "furniture2.png", "furniture3.png", ..., "furniture13.png"],
+            lights: ["light1.png", "light2.png", "light3.png", "light4.png", "light6.png"],
+            decoration: ["deco1.png", "deco2.png", "deco3.png", ..., "furniture7.png"]
         };
 
         function openPopup(category) {
