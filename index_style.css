@@ -48,3 +48,11 @@ button {
   background-color: white;
   font-family: Noto Sans, sans-serif;
 }
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #a6a6a6;
+  font-size: 14px;
+}
