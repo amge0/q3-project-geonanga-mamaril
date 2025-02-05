@@ -73,3 +73,13 @@ body {
   align-items: center;
   background-color: #E6E6FA;
 }
+
+footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #a6a6a6;
+  font-size: 14px;
+  font-family: Noto Sans, sans-serif;
+}
