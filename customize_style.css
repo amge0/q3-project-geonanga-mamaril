@@ -126,3 +126,99 @@ header {
    top: 0; left: 0; 
    z-index: -2; 
 }
+
+body {
+  text-align: center;
+  background-color: #e6e3f1;
+}
+
+.container {
+   width: 500px;
+   margin: auto;
+   padding: 20px;
+   background-color: #d3cfd6;
+   border-radius: 10px;
+   position: relative;
+}
+
+h1 {
+   font-size: 24px;
+   font-weight: bold;
+}
+
+.room {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    background-image: url('room-image.jpg'); /* Replace with actual room image */
+    background-size: cover;
+    background-position: center;
+}
+
+.placed-image {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    cursor: grab;
+}
+
+ .side-buttons {
+    position: absolute;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left-buttons { left: 20px; }
+.right-buttons { right: 20px; }
+.button {
+    background-color: #ff9999;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.bottom-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .control {
+            background-color: #f8f5a8;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+        }
+        /* Pop-up selection panel */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 3;
+        }
+        .popup img {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .popup button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
