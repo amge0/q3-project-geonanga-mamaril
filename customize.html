@@ -26,10 +26,11 @@
             width: 300px;
             height: 300px;
             margin: 10px auto;
-            border: 2px solid black;
-            background-image: url('https://i.pinimg.com/736x/af/78/83/af78836ae22a6f7d3843e339c8457335.jpg'); 
+            background-image: url('room-image.jpg'); /* Replace with actual room image */
             background-size: cover;
             background-position: center;
+            
+
         }
         .placed-image {
             position: absolute;
@@ -79,6 +80,7 @@
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
             display: none;
+            z-index: 3;
         }
         .popup img {
             width: 80px;
@@ -135,14 +137,16 @@
     </div>
   
   <div class="room" id="room">
+    <div class="room" id="room">
     <img src="https://i.pinimg.com/736x/af/78/83/af78836ae22a6f7d3843e339c8457335.jpg" width="300" height="300" class="background-image">
+
 </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", loadSavedImages);
 
         const imageCategories = {
-            furnitures: ["https://i.pinimg.com/736x/41/b8/ed/41b8ed2cb5d3de4b38bc4e2c389a2f2d.jpg", "furniture2.png", "furniture3.png"],
+            furnitures: ["furniture1.png", "furniture2.png", "furniture3.png"],
             lights: ["light1.png", "light2.png", "light3.png"],
             decoration: ["deco1.png", "deco2.png", "deco3.png"]
         };
