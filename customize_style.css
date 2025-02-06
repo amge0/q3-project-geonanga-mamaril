@@ -26,6 +26,7 @@
 body {
             text-align: center;
             background-color: #e0dfe8;
+            background-image: url('https://i.pinimg.com/736x/12/63/a9/1263a944c273ce91048355b916291b2f.jpg');
         }
         .container {
             width: 500px;
@@ -44,7 +45,7 @@ body {
             width: 300px;
             height: 300px;
             margin: 10px auto;
-            background-image: url('room-image.jpg'); /* Replace with actual room image */
+            background-image: url('room-image.jpg');
             background-size: cover;
             background-position: center;
             
@@ -63,8 +64,8 @@ body {
             flex-direction: column;
             gap: 10px;
         }
-        .left-buttons { left: 20px; }
-        .right-buttons { right: 20px; }
+        .left-buttons { left: 20px; width: 170 px; length: 70 px;}
+        .right-buttons { right: 20px; width: 170 px; length: 70 px; }
         .button {
             background-color: #ff9999;
             padding: 10px;
