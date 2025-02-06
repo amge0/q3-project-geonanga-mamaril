@@ -73,6 +73,7 @@ body {
             cursor: pointer;
             border-radius: 5px;
             font-size: 14px;
+            font-family: 'Dancing Script', cursive;
         }
         .bottom-buttons {
             display: flex;
