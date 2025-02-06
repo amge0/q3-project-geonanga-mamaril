@@ -24,10 +24,10 @@
 }     
 
 body {
-            text-align: center;
-            background-color: #e0dfe8;
-            background-image: url('https://i.pinimg.com/736x/b9/ef/7b/b9ef7bf2dcc45b9f3cf9a0aa2d44639f.jpg');
-        }
+    background-image: url("https://i.pinimg.com/736x/b9/ef/7b/b9ef7bf2dcc45b9f3cf9a0aa2d44639f.jpg");
+    background-size: cover;
+    background-position: center;
+}
         .container {
             width: 500px;
             margin: auto;
