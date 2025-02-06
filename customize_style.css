@@ -67,12 +67,12 @@ body {
         .left-buttons { left: 20px; width: 170 px; length: 70 px;}
         .right-buttons { right: 20px; width: 170 px; length: 70 px; }
         .button {
-            background-color: #ff9999;
+            background-color: #fac8e1;
             padding: 10px;
             border: none;
             cursor: pointer;
             border-radius: 5px;
-            font-size: 14px;
+            font-size: 15px;
             font-family: 'Dancing Script', cursive;
         }
         .bottom-buttons {
