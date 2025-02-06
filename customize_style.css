@@ -67,7 +67,7 @@ body {
         .left-buttons { left: 20px; width: 170 px; length: 70 px;}
         .right-buttons { right: 20px; width: 170 px; length: 70 px; }
         .button {
-            background-color: #fac8e1;
+            background-color: #eb428e;
             padding: 10px;
             border: none;
             cursor: pointer;
@@ -82,7 +82,7 @@ body {
             margin-top: 10px;
         }
         .control {
-            background-color: #eb428e;
+            background-color: #fac8e1 ;
             padding: 8px 12px;
             border-radius: 5px;
             cursor: pointer;
