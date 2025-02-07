@@ -45,9 +45,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("https://i.pinimg.com/736x/44/86/43/4486432dd1a99e7e6e4a3c42767f3334.jpg");
-  background-size: cover;
-  background-position: center;
+  background-color: #E6E6FA;
+}
       
 header {
   font-family: Helvetica, serif;
@@ -85,11 +84,20 @@ header {
 }
 
 .image-grid div {
-  border: 2px solid black;
+  background: white; /* Solid white background */
+  border: none; /* Removed border */
   height: 100px;
+  border-radius: 15px; /* Rounded corners */
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth zoom effect */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.image-grid div:hover {
+  transform: scale(1.1); /* Zoom effect */
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .recent-room {
