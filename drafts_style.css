@@ -101,6 +101,11 @@ header {
   object-fit: cover;
   border-radius: 15px; /* Rounded corners */
 }
+.audio-player {
+  position: absolute;
+  top: 100px;
+  right: 0px;
+}
 
 .footer {
   margin-top: 20px;
