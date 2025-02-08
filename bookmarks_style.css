@@ -113,3 +113,8 @@ header {
 .zoomable:hover {
   transform: scale(1.5);
 }
+.audio-player {
+  position: absolute;
+  top: 100px;
+  right: 0px;
+}
