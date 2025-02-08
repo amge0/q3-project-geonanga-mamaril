@@ -46,8 +46,12 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #E6E6FA;
+  background-image: url("https://i.pinimg.com/736x/25/82/04/258204f4e46392ce862fdc7e37ae2af6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-      
+
 header {
   font-family: Helvetica, serif;
   font-size: 250%;
@@ -68,12 +72,34 @@ header {
   margin-top: 20px;
 }
 
-.image-grid div {
-  border: 2px solid black;
-  height: 100px;
+/* Shared styling for both the 3 top images and the unfinished rooms */
+.image-grid div,
+.recent-room {
+  background: white; /* Solid white background */
+  border: none; /* Removed black border */
+  width: 250px;  /* Ensuring same width */
+  height: 200px; /* Ensuring same height */
+  border-radius: 15px; /* Rounded corners */
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth zoom effect */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.image-grid div:hover,
+.recent-room:hover {
+  transform: scale(1.1); /* Zoom effect */
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Ensure images inside grid and unfinished rooms have the same size */
+.image-grid img,
+.recent-room img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px; /* Rounded corners */
 }
 
 .footer {
