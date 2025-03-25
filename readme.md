@@ -5,20 +5,21 @@ Another type of update will be the addition of two new pages: (1) _About the Cre
 
 
 1. About the Creators Page
+Type of data: Text
+Purpose: For users to familiarize with the creators of the site and understand the inspirations behind the project
+Structure in JSON format:
 
-   Type of data: Text
-   Purpose: For users to familiarize with the creators of the site and understand the inspirations behind the project
-   Structure in JSON format:
-      about_us {
-        purpose: text-string,
-        thea_interest: text-string,
-        thea_inspo: text-string,
-        thea_more: text-string,
-        elay_interest: text-string,
-        elay_inspo: text-string,
-        elay_more: text-string
-      }
-   ![](About.png) 
+about_us {
+purpose: text-string,
+thea_interest: text-string,
+thea_inspo: text-string,
+thea_more: text-string,
+elay_interest: text-string,
+elay_inspo: text-string,
+elay_more: text-string
+}
+
+![](About.png) 
    
 3. Login/Signup & Theme Generator Page
    ![](LoginSignupTheme)
