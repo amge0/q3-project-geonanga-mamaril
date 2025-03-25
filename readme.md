@@ -5,6 +5,7 @@ Another type of update will be the addition of two new pages: (1) _About the Cre
 
 
 1. About the Creators Page
+
    Type of data: Text
    Purpose: For users to familiarize with the creators of the site and understand the inspirations behind the project
    Structure in JSON format:
