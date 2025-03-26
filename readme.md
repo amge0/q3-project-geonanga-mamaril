@@ -1,7 +1,7 @@
 # Q4 Project Update Plan
 **Summary**: These updates will include a change in code in a few pages of the website to ensure that the website works properly. For the case of _Customize_, its .js needs to include a function that'll save the room design to either _Drafts_ or _Collections_. The chosen favorites works in _Collections_ will be shown in _Bookmarks_ with a function as well.
 
-Another type of update will be the addition of two new pages: (1) _About the Creators_ and (2) _Login/Signup & Theme Generator_. The first page will replace the Social Media page as its contents will transfer to the footer on every page while the second will ask for a username and password along with the user's preference, generating a room that fits their choice.
+Another type of update will be the addition of two new pages: (1) _About the Creators_ and (2) _Login/Signup & Theme Generator_. The first page will replace the Social Media page as its contents will transfer to the footer on every page while the second will ask for a username and password along with the user's preference, generating a room that fits their choice to give the website a game-like appearance.
 
 
 1. About the Creators Page
@@ -21,13 +21,14 @@ elay_more: text-string
 
 ![](About.png) 
    
-3. Login/Signup & Theme Generator Page
-   ![](LoginSignupTheme)
+2. Login/Signup & Theme Generator Page
+   ![](LoginSignupTheme.png)
 
-4. Image sizing
+3. Image sizing
 
-5. Save contents of "Customize" to either "Drafts" or "Collections"
+4. Save contents of "Customize" to either "Drafts" or "Collections"
+Type of data:
 
-6. Bookmark rooms from "Collections" to "Bookmarks"
+5. Bookmark rooms from "Collections" to "Bookmarks"
 
-7. Social media accounts on footer 
+6. Social media accounts on footer
