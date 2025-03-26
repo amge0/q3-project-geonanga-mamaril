@@ -26,9 +26,9 @@ Type of data: Drag-and-drop
 Purpose: To ask for the user's interest in terms of style and aesthetic, this generator gives them an idea on which theme suits their liking the most
 Structure in JSON format:
 
-theme [
+{theme [
 {
-"id": "Minimalist",
+"id": "Minimalist"
 },
 {
 "id": "Vintage"
@@ -57,14 +57,20 @@ theme [
 {
 "id": "Nature"
 }
-]
+]}
 
 ![](LoginSignupTheme.png)
 
 3. Image sizing of existing photos
 Type of data: Image source
-Purpose: To make sure all images are scaled properly
-Structure:
+Purpose: To make sure all images are scaled properly by resizing based on the image's raw dimensions
+Structure in JSON format:
+
+{
+"src": name of image,
+"width": measure in px,
+"height": measure in px
+}
 
 5. Save contents of "Customize" to either "Drafts" or "Collections"
 Type of data: Image source (src) as string, Position (left, top) as strings or numbers (px values)
