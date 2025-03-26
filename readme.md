@@ -22,15 +22,48 @@ about_us {
 ![](About.png) 
    
 2. Login/Signup & Theme Generator Page
-Type of data:
-Purpose:
+Type of data: Drag-and-drop
+Purpose: To ask for the user's interest in terms of style and aesthetic, this generator gives them an idea on which theme suits their liking the most
 Structure in JSON format:
+
+theme [
+{
+"id": "Minimalist",
+},
+{
+"id": "Vintage"
+},
+{
+"id": "Coastal"
+},
+{
+"id": "Luxury Glam"
+},
+{
+"id": "Futuristic"
+},
+{
+"id": "Anime/Pop Culture"
+},
+{
+"id": "Dark Academia"
+},
+{
+"id": "Cottagecore"
+},
+{
+"id": "Fantasy/Fairy Tale"
+},
+{
+"id": "Nature"
+}
+]
 
 ![](LoginSignupTheme.png)
 
 3. Image sizing of existing photos
-Type of data: To make sure all images are scaled properly
-Purpose: 
+Type of data: Image source
+Purpose: To make sure all images are scaled properly
 Structure:
 
 5. Save contents of "Customize" to either "Drafts" or "Collections"
