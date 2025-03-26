@@ -6,29 +6,77 @@ Another type of update will be the addition of two new pages: (1) _About the Cre
 
 1. About the Creators Page
 Type of data: Text
-Purpose: For users to familiarize with the creators of the site and understand the inspirations behind the project
+Purpose: For users to familiarize with the creators of the site and understand the inspirations behind the project.
 Structure in JSON format:
 
 about_us {
-purpose: text-string,
-thea_interest: text-string,
-thea_inspo: text-string,
-thea_more: text-string,
-elay_interest: text-string,
-elay_inspo: text-string,
-elay_more: text-string
+"purpose": "Familiarize with the creators by reading the contents of this page as they share their interests and inspirations!",
+"thea_interest": "Project Sekai, music, drawing, anime, true crime, history",
+"thea_inspo": "We wanted to make this type of website since it's hard to rearrange a room if you don't have any inspiration for the theme of your room. In order to solve this problem, we decided to make a website wherein you can customize your own room.",
+"thea_more": "Fav STEM subject: Bio because I hate computing",
+"elay_interest": "F1, biking, adventures, pink, drawing, music",
+"elay_inspo": "We wanted to make this type of website since it's hard to rearrange a room if you don't have any inspiration for the theme of your room. In order to solve this problem, we decided to make a website wherein you can customize your own room.",
+"elay_more": text-string
 }
 
 ![](About.png) 
    
 2. Login/Signup & Theme Generator Page
-   ![](LoginSignupTheme.png)
+Type of data:
+Purpose:
+Structure in JSON format:
+
+![](LoginSignupTheme.png)
 
 3. Image sizing
+Type of data: 
 
 4. Save contents of "Customize" to either "Drafts" or "Collections"
-Type of data:
+Type of data: Image source (src) as string, Position (left, top) as strings or numbers (px values)
+Purpose: To store and retrieve customized room layouts, allowing users to bookmark and revisit their designs.
+Structure in JSON format:
+{
+"src": "furniture1.png",
+"left": "100px",
+"top": "150px"
+},
+
+{
+"src": "light2.png",
+"left": "200px",
+"top": "250px"
+},
+
+{
+"src": "deco3.png",
+"left": "300px",
+"top": "350px"
+}
 
 5. Bookmark rooms from "Collections" to "Bookmarks"
+Type of data:
+Purpose:
+Structure in JSON format:
 
-6. Social media accounts on footer
+7. Social media accounts on footer
+Type of data: Structural/Footer
+Purpose: Users can easily navigate social media accounts on every page.
+Structure in JSON format:
+
+{
+"site": "X",
+"url": "https://x.com/manage_czone",
+"icon": image
+}
+
+{
+"site": "GMail",
+"url": "https://mail.google.com",
+"icon": image
+}
+
+{
+"site": "YouTube",
+"url": "https://wwww.youtube.com/@ComfortZoneManagement",
+"icon": image
+}
