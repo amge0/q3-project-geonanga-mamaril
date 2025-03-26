@@ -28,10 +28,12 @@ Structure in JSON format:
 
 ![](LoginSignupTheme.png)
 
-3. Image sizing
-Type of data: 
+3. Image sizing of existing photos
+Type of data: To make sure all images are scaled properly
+Purpose: 
+Structure:
 
-4. Save contents of "Customize" to either "Drafts" or "Collections"
+5. Save contents of "Customize" to either "Drafts" or "Collections"
 Type of data: Image source (src) as string, Position (left, top) as strings or numbers (px values)
 Purpose: To store and retrieve customized room layouts, allowing users to bookmark and revisit their designs.
 Structure in JSON format:
@@ -54,9 +56,21 @@ Structure in JSON format:
 }
 
 5. Bookmark rooms from "Collections" to "Bookmarks"
-Type of data:
-Purpose:
+Type of data: Image URL, String
+Purpose: To easily navigate favorite room designs
 Structure in JSON format:
+
+{
+"name": text-string,
+"desc": text-string,
+"image": image
+},
+
+{
+"name": text-string,
+"desc": text-string,
+"image": image
+}
 
 7. Social media accounts on footer
 Type of data: Structural/Footer
@@ -67,13 +81,13 @@ Structure in JSON format:
 "site": "X",
 "url": "https://x.com/manage_czone",
 "icon": image
-}
+},
 
 {
 "site": "GMail",
 "url": "https://mail.google.com",
 "icon": image
-}
+},
 
 {
 "site": "YouTube",
