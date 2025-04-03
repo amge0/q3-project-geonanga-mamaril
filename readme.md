@@ -74,6 +74,12 @@ Structure in JSON format:
 }
 ]}
 
+account {
+"username": text-string,
+
+"password": text-string
+}
+
 ![](LoginSignupTheme.png)
 
 3. Image sizing of existing photos
