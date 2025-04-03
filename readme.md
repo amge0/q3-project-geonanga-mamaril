@@ -93,6 +93,7 @@ Structure in JSON format:
 Type of data: Image source (src) as string, Position (left, top) as strings or numbers (px values)
 Purpose: To store and retrieve customized room layouts, allowing users to bookmark and revisit their designs.
 Structure in JSON format:
+
 {
 "src": "furniture1.png",
 
