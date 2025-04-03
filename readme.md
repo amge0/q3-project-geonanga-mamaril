@@ -72,7 +72,7 @@ Structure in JSON format:
 "height": measure in px
 }
 
-5. Save contents of "Customize" to either "Drafts" or "Collections"
+4. Save contents of "Customize" to either "Drafts" or "Collections"
 Type of data: Image source (src) as string, Position (left, top) as strings or numbers (px values)
 Purpose: To store and retrieve customized room layouts, allowing users to bookmark and revisit their designs.
 Structure in JSON format:
@@ -111,7 +111,7 @@ Structure in JSON format:
 "image": image
 }
 
-7. Social media accounts on footer
+6. Social media accounts on footer
 Type of data: Structural/Footer
 Purpose: Users can easily navigate social media accounts on every page.
 Structure in JSON format:
