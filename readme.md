@@ -11,11 +11,17 @@ Structure in JSON format:
 
 about_us {
 "purpose": "Familiarize with the creators by reading the contents of this page as they share their interests and inspirations!",
+
 "thea_interest": "Project Sekai, music, drawing, anime, true crime, history",
+
 "thea_inspo": "We wanted to make this type of website since it's hard to rearrange a room if you don't have any inspiration for the theme of your room. In order to solve this problem, we decided to make a website wherein you can customize your own room.",
+
 "thea_more": "Fav STEM subject: Bio because I hate computing",
+
 "elay_interest": "F1, biking, adventures, pink, drawing, music",
+
 "elay_inspo": "We wanted to make this type of website since it's hard to rearrange a room if you don't have any inspiration for the theme of your room. In order to solve this problem, we decided to make a website wherein you can customize your own room.",
+
 "elay_more": text-string
 }
 
