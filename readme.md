@@ -36,30 +36,39 @@ Structure in JSON format:
 {
 "id": "Minimalist"
 },
+
 {
 "id": "Vintage"
 },
+
 {
 "id": "Coastal"
 },
+
 {
 "id": "Luxury Glam"
 },
+
 {
 "id": "Futuristic"
 },
+
 {
 "id": "Anime/Pop Culture"
 },
+
 {
 "id": "Dark Academia"
 },
+
 {
 "id": "Cottagecore"
 },
+
 {
 "id": "Fantasy/Fairy Tale"
 },
+
 {
 "id": "Nature"
 }
@@ -74,7 +83,9 @@ Structure in JSON format:
 
 {
 "src": name of image,
+
 "width": measure in px,
+
 "height": measure in px
 }
 
@@ -84,19 +95,25 @@ Purpose: To store and retrieve customized room layouts, allowing users to bookma
 Structure in JSON format:
 {
 "src": "furniture1.png",
+
 "left": "100px",
+
 "top": "150px"
 },
 
 {
 "src": "light2.png",
+
 "left": "200px",
+
 "top": "250px"
 },
 
 {
 "src": "deco3.png",
+
 "left": "300px",
+
 "top": "350px"
 }
 
@@ -107,13 +124,17 @@ Structure in JSON format:
 
 {
 "name": text-string,
+
 "desc": text-string,
+
 "image": image
 },
 
 {
 "name": text-string,
+
 "desc": text-string,
+
 "image": image
 }
 
@@ -124,18 +145,24 @@ Structure in JSON format:
 
 {
 "site": "X",
+
 "url": "https://x.com/manage_czone",
+
 "icon": image
 },
 
 {
 "site": "GMail",
+
 "url": "https://mail.google.com",
+
 "icon": image
 },
 
 {
 "site": "YouTube",
+
 "url": "https://wwww.youtube.com/@ComfortZoneManagement",
+
 "icon": image
 }
