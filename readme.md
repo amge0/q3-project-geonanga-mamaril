@@ -11,7 +11,7 @@ Purpose: For users to familiarize with the creators of the site and understand t
    
 2. Login/Signup & Theme Generator Page
 Type of data: Drag-and-drop
-Purpose: To ask for the user's interest in terms of style and aesthetic, this generator gives them an idea on which theme suits their liking the most
+Purpose: To ask for the user's interest in terms of style and aesthetic, this generator gives them an idea on which theme suits their liking the most. When you log in to our site, you'll be able to save your designs, and they will be displayed on our collections webpage. In contrast, if you are not logged in, you won't have the option to save your work. Additionally, logging in grants you access to our theme generator, allowing you to choose a theme for your designs.
 Structure in JSON format:
 
 {theme [
