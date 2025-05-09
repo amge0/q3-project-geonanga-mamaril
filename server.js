@@ -10,6 +10,10 @@ app.use(express.static('public'));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
+app.get('/some-page', (req, res) => {
+  res.render('index.html');
+});
+
 const usersFilePath = path.join(__dirname, 'data', 'users.json');
 if (!fs.existsSync(path.join(__dirname, 'data'))) {
   console.log('Creating data directory...');
