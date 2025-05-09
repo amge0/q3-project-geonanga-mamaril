@@ -1,89 +1,55 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="author" content="" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <title>Comfort Zone</title>
+    <meta name="author" content="Geonanga, Mamaril" />
+    <meta name="description" content="Drafts for room designs" />
+    <meta name="keywords" content="drafts, unfinished rooms" />
+    <title>Drafts | Comfort Zone</title>
     <link href="drafts_style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" type="image/x-icon"/>
-
-  <div class="topnav">
-    <a class="active" href="index.html">Login</a>
-    <a href="home.html">Home</a>
-    <a href="bookmarks.html">Bookmarks</a>
-    <a href="collections.html">Collections</a>
-    <a href="customize.html">Customize</a>
-    <a href="about.html">About Us</a>
-  </div>
-    
-    <script>
-      function showCollectionPage() {
-        const container = document.createElement("div");
-        container.innerHTML = `
-          <header>
-            COMFORT ZONE<br />
-            <span style="font-size: 16px;">Collection</span>
-          </header>
-
-          <div id="main-container">
-            <div class="image-grid">
-              <div>Unfinished Room 1</div>
-              <div>Unfinished Room 2</div>
-              <div>Unfinished Room 3</div>
-              <div>Unfinished Room 4</div>
-              <div>Unfinished Room 5</div>
-              <div>Unfinished Room 6</div>
-            </div>
-
-            <div class="footer">copyright and sources</div>
-          </div>
-        `;
-        document.body.appendChild(container);
-      }
-      
-
-      function showDraftsPage() {
-        const container = document.createElement("div");
-        container.innerHTML = `
-          <header>
-            COMFORT ZONE<br />
-            <span style="font-size: 16px;">Drafts</span>
-          </header>
-
-          <div id="main-container">
-            <div class="image-grid">
-              
-              <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/765726cc-111c-4949-91a4-61df62e36f29.image.png?v=1737638804139" width="100" height="100" alt="Zoomable Image" class="zoomable">
-              <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/a7f1969d-37f1-42c0-ada7-b03f2f2fc3ce.image.png?v=1737638975609" width="100" height="100" alt="Zoomable Image" class="zoomable">
-              <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/1b8380ce-70d8-4989-9d94-f47fcc7c8719.image.png?v=1737639926580" width="100" height="100" alt="Zoomable Image" class="zoomable">
-              <div>Unfinished Room 4</div>
-              <div>Unfinished Room 5</div>
-              <div>Unfinished Room 6</div>
-            </div>
-
-            <div class="footer">copyright and sources</div>
-          </div>
-        `;
-        document.body.appendChild(container);
-      }
-      
-      
-    </script>
-  </head>
-  <body>
-    <div class="audio-player">
-      <audio id="audio" controls>
-        <source src="https://raw.githubusercontent.com/rianneclemiel/audio-files/main/Once%20Upon%20a%20Dream.mp3
-        " type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>   
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans&display=swap" rel="stylesheet"> <!-- Added Dancing Script -->
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Login</a>
+        <a href="home.html">Home</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="collections.html">Collections</a>
+        <a href="customize.html">Customize</a>
+        <a href="about.html">About Us</a>
     </div>
+
     <button onclick="showDraftsPage()">📄 Drafts</button>
-  </body>
-  <footer>
+
+    <script>
+        function showDraftsPage() {
+            const container = document.createElement("div");
+            container.innerHTML = `
+                <header>
+                    COMFORT ZONE<br />
+                    <span style="font-size: 16px;">Drafts</span>
+                </header>
+                
+                <div id="main-container">
+                    <div class="image-grid">
+                        <div>Unfinished Room 1</div>
+                        <div>Unfinished Room 2</div>
+                        <div>Unfinished Room 3</div>
+                        <div>Unfinished Room 4</div>
+                        <div>Unfinished Room 5</div>
+                        <div>Unfinished Room 6</div>
+                    </div>
+
+                    <div class="footer">copyright and sources</div>
+                </div>
+            `;
+            document.body.appendChild(container);
+        }
+    </script>
+</body>
+<footer>
     © Thea Geonanga and Elay Mamaril<br/>
-  </footer>
+</footer>
 </html>
