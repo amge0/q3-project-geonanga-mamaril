@@ -1,113 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="author" content="Geonanga, Mamaril"/>
-    <meta name="description" content="Comfort Zone is an online website that lets you use your creative and artistic thinking to create and name your own bedroom."/>
-    <meta name="keywords" content="room decor"/>
-    <title>Sign Up/Log In | Comfort Zone</title>
-    <link href="index_style.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" type="image/x-icon"/>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <title>Comfort Zone | Log In</title>
+    <link href="index_style.css" rel="stylesheet" />
+    <link rel="icon" href="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
   </head>
 
   <body>
     <div class="audio-player">
-      <audio id="audio" controls>
+      <audio controls>
         <source src="https://raw.githubusercontent.com/rianneclemiel/audio-files/main/Once%20Upon%20a%20Dream.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>   
+      </audio>
     </div>
 
     <header id="header">
       <h2><i>Welcome to your</i></h2>
       <h1><b>COMFORT ZONE</b></h1>
-      <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" width="100" height="100" alt="logo"><br/>
+      <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" width="100" height="100" alt="logo" />
     </header>
 
     <div class="generator">
-      <p>Choose your theme, serving as your template!</p>
-      <select id="theme" name="theme" required>
-        <option value="Minimalist" selected> Minimalist </option>
-        <option value="Vintage"> Vintage </option>
-        <option value="Coastal"> Coastal </option>
-        <option value="LuxuryGlam"> Luxury Glam </option>
-        <option value="Futuristic"> Futuristic </option>
-        <option value="AnimePopCulture"> Anime/Pop Culture </option>
-        <option value="DarkAcademia"> Dark Academia </option>
-        <option value="Cottagecore"> Cottagecore </option>
-        <option value="FantasyFairyTale"> Fantasy/Fairy Tale </option>
-        <option value="Nature"> Nature </option>
+      <label for="theme">Choose your room theme!</label><br/>
+      <select id="theme" name="theme">
+        <option value="Minimalist">Minimalist</option>
+        <option value="Vintage">Vintage</option>
+        <option value="Coastal">Coastal</option>
+        <option value="LuxuryGlam">Luxury Glam</option>
+        <option value="Futuristic">Futuristic</option>
+        <option value="AnimePopCulture">Anime/Pop Culture</option>
+        <option value="DarkAcademia">Dark Academia</option>
+        <option value="Cottagecore">Cottagecore</option>
+        <option value="FantasyFairyTale">Fantasy/Fairy Tale</option>
+        <option value="Nature">Nature</option>
       </select>
     </div>
 
-    <form id="loginForm">
-      <div class="signup">
-        <p><b>Sign Up/Log In</b></p>
+    <form class="signup">
+      <label>Username<br/>
+        <input type="text" id="username" required>
+      </label><br/>
+      <label>Password<br/>
+        <input type="password" id="password" required>
+      </label><br/>
 
-        <label>Username<br/>
-          <input type="text" id="username" name="username" required>
-        </label><br/>
-
-        <label>Password<br/>
-          <input type="password" id="password" name="password" required>
-        </label><br/>
-
-        <button type="button" onclick="saveInputs()">Save</button>
-        <button type="button" onclick="editInputs()">Edit</button>
-        <button type="button" onclick="deleteInputs()">Delete</button>
-      </div>
+      <button type="button" onclick="saveData()">Save</button>
+      <button type="button" onclick="editData()">Edit</button>
+      <button type="button" onclick="deleteData()">Delete</button>
     </form>
 
     <div id="webpages">
-      <button type="button" onclick="window.location.href='customize.html'">🖌️ Customize</button><br /><br />
-      <button type="button" onclick="window.location.href='bookmarks.html'">📌 Bookmarks</button><br/><br/>
-      <button type="button" onclick="window.location.href='collections.html'">🗃️ Collections</button><br /><br />
-      <button type="button" onclick="window.location.href='drafts.html'">📄 Drafts</button><br /><br />
-      <button type="button" onclick="window.location.href='about.html'">🌐 About the Creators</button>
+      <button onclick="window.location.href='customize.html'">🖌️ Customize</button><br/><br/>
+      <button onclick="window.location.href='bookmarks.html'">📌 Bookmarks</button><br/><br/>
+      <button onclick="window.location.href='collections.html'">🗃️ Collections</button><br/><br/>
+      <button onclick="window.location.href='drafts.html'">📄 Drafts</button><br/><br/>
+      <button onclick="window.location.href='about.html'">🌐 About the Creators</button>
     </div>
 
     <footer>
-      © Thea Geonanga and Elay Mamaril
+      &copy; Thea Geonanga and Elay Mamaril
     </footer>
 
     <script>
-      function saveInputs() {
+      function saveData() {
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
-
-        if (username && password) {
-          localStorage.setItem("savedUsername", username);
-          localStorage.setItem("savedPassword", password);
-          alert("Info saved!");
-        } else {
-          alert("Please enter both username and password.");
-        }
+        localStorage.setItem("savedUsername", username);
+        localStorage.setItem("savedPassword", password);
+        document.getElementById("username").disabled = true;
+        document.getElementById("password").disabled = true;
+        alert("Your info has been saved!");
       }
 
-      function editInputs() {
+      function editData() {
         document.getElementById("username").disabled = false;
         document.getElementById("password").disabled = false;
-        alert("You can now edit your info.");
       }
 
-      function deleteInputs() {
-        if (confirm("Are you sure you want to delete your info?")) {
+      function deleteData() {
+        if (confirm("Are you sure you want to delete your data?")) {
           document.getElementById("username").value = "";
           document.getElementById("password").value = "";
           localStorage.removeItem("savedUsername");
           localStorage.removeItem("savedPassword");
+          document.getElementById("username").disabled = false;
+          document.getElementById("password").disabled = false;
         }
       }
 
       // Pre-fill inputs if saved
-      window.onload = function () {
-        const savedUsername = localStorage.getItem("savedUsername");
-        const savedPassword = localStorage.getItem("savedPassword");
-        if (savedUsername) document.getElementById("username").value = savedUsername;
-        if (savedPassword) document.getElementById("password").value = savedPassword;
+      window.onload = () => {
+        if (localStorage.getItem("savedUsername")) {
+          document.getElementById("username").value = localStorage.getItem("savedUsername");
+          document.getElementById("username").disabled = true;
+        }
+        if (localStorage.getItem("savedPassword")) {
+          document.getElementById("password").value = localStorage.getItem("savedPassword");
+          document.getElementById("password").disabled = true;
+        }
       };
     </script>
   </body>
 </html>
+
