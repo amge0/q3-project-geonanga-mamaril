@@ -14,7 +14,7 @@ h2 {
   font-weight: normal;
 }
 
-.generator {
+#generator {
   height: 200%;
   width: 50%;
   padding: 10px;
@@ -28,13 +28,21 @@ h2 {
   width: 100%;
 }
 
-.signup {
+#signup {
   height: 200%;
   width: 50%;
   padding: 10px;
   display: table-cell;
   text-align: left;
   background-color: #8c8ba6;
+  font-family: Noto Sans, sans-serif;
+}
+
+#webpages {
+  width: 100%;
+  display: table-cell;
+  text-align: center;
+  background-color: white;
   font-family: Noto Sans, sans-serif;
 }
 
