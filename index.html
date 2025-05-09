@@ -61,47 +61,29 @@
     </p>
       
       <label>Username
-        <input type="text" id="username" name="name">
+        <input type="text" id="username" name="username" required>
       </label><br/><br/>
       
       <label>Password
-        <input type="password" id="password">
+        <input type="password" id="password" name="password" required>
       </label><br/><br/>
       
-      <button>
-        Save
-      </button><br/>
-      <button>
-        Edit
-      </button><br/>
-      <button>
-        Delete
-      </button>
+      <button type="submit" name="action" value="save" onclick="return confirmchoice('save')">Save</button>
+      <button type="submit" name="action" value="edit" onclick="return edit">Edit</button>
+      <button type="submit" name="action" value="delete" onclick="return confirmchoice('delete')">Delete</button>
     </form>
 
     <script>
-      function enable(ele, key) {
-        if (ele.innerHTML == "Save") {
-        if (confirm("Are you sure?"))
-          document.getElementById("form"+key).submit();
-        else {
-          const eleBtns = document.querySelectorAll(".editBtns")
-          for (let i = 0; i < eleBtns.length; i++) {
-            eleBtns[i].disabled = false;
-          }   
-          document.getElementById(key).disabled=true;
-          ele.innerHTML = "Edit";
-        }
+      function confirmchoice {
+        const message = action === 'delete' 
+      ? "Are you sure you want to delete this account?" 
+      : "Are you sure you want to save your information?";
+    return confirm(message); // If "OK", form submits. If "Cancel", it doesn't.
       }
-      else { // if it is an edit button enable score box and disable the other edit buttons
-        const eleBtns = document.querySelectorAll(".editBtns")
-        for (let i = 0; i < eleBtns.length; i++) {
-          eleBtns[i].disabled = true;
-        }   
-        document.getElementById(key).disabled=false;
-        ele.innerHTML = "Save";
-        ele.disabled=false;
-      }
+
+      function edit {
+        document.getElementById("username").disabled = false;
+        document.getElementById("password").disabled = false;
       }
     </script>
     
