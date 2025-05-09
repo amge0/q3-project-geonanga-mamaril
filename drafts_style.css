@@ -1,9 +1,12 @@
+/* Importing the Public Pixel font */
+@import url('https://fonts.googleapis.com/css2?family=Public+Pixel&display=swap');
+
 * {
   background: #e0dfe8;
 }
 
 .topnav {
-  font-family: 'Public Pixel', sans-serif; /* Updated to Public Pixel */
+  font-family: 'Public Pixel', sans-serif; /* Using Public Pixel font */
   font-weight: normal;
   background-color: #f4e3ff;
   overflow: hidden;
@@ -27,7 +30,7 @@
 }
 
 button {
-  font-family: 'Public Pixel', sans-serif; /* Updated to Public Pixel */
+  font-family: 'Public Pixel', sans-serif; /* Using Public Pixel font */
   font-size: 100%;
   background: #FFFFFF;
   border: 1px solid #000000;
@@ -39,7 +42,7 @@ button {
 }
 
 body {
-  font-family: 'Public Pixel', sans-serif; /* Updated to Public Pixel */
+  font-family: 'Public Pixel', sans-serif; /* Using Public Pixel font */
   margin: 0;
   padding: 0;
   display: flex;
@@ -54,7 +57,7 @@ body {
 }
 
 header {
-  font-family: 'Public Pixel', sans-serif; /* Updated to Public Pixel */
+  font-family: 'Public Pixel', sans-serif; /* Using Public Pixel font */
   font-size: 250%;
   text-align: center;
   font-weight: bold;
