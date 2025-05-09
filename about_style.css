@@ -1,0 +1,64 @@
+#header {
+  text-align: center;
+  line-height: 5px;
+}
+
+h1 {
+  font-family: Helvetica, serif;
+  font-size: 300%;
+  padding: 10px;
+}
+
+h2 {
+  font-family: Noto Sans, sans-serif;
+  font-weight: normal;
+}
+
+button {
+  font-family: 'Dancing Script', cursive;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+  width: 100%;
+}
+
+#thea {
+  height: 200%;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  display: table-cell;
+  background-color: #b6b7cf;
+  font-family: Noto Sans, sans-serif;
+}
+
+#elay {
+  height: 200%;
+  width: 50%;
+  padding: 10px;
+  display: table-cell;
+  text-align: center;
+  background-color: white;
+  font-family: Noto Sans, sans-serif;
+}
+
+footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #a6a6a6;
+  font-size: 14px;
+  font-family: Noto Sans, sans-serif;
+}
+body {
+  background-image: url('https://i.pinimg.com/736x/12/63/a9/1263a944c273ce91048355b916291b2f.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
