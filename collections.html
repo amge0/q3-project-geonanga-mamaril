@@ -3,22 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="author" content="" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <title>Comfort Zone</title>
+    <meta name="author" content="Geonanga, Mamaril" />
+    <meta name="description" content="Browse featured and recent room collections." />
+    <meta name="keywords" content="room design, interior, collections" />
+    <title>Collections | Comfort Zone</title>
     <link href="collections_style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet" />
     <link rel="icon" href="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" type="image/x-icon"/>
+  </head>
 
+  <body>
     <div class="topnav">
-    <a class="active" href="index.html">Login</a>
-    <a href="home.html">Home</a>
-    <a href="bookmarks.html">Bookmarks</a>
-    <a href="customize.html">Customize</a>
-    <a href="drafts.html">Drafts</a>
-    <a href="about.html">About Us</a>
-  </div>
-    
+      <a href="index.html">Login</a>
+      <a href="home.html">Home</a>
+      <a href="bookmarks.html">Bookmarks</a>
+      <a href="customize.html">Customize</a>
+      <a href="drafts.html">Drafts</a>
+      <a href="about.html">About Us</a>
+    </div>
+
+    <div class="audio-player">
+      <audio id="audio" controls>
+        <source src="https://raw.githubusercontent.com/rianneclemiel/audio-files/main/Once%20Upon%20a%20Dream.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>   
+    </div>
+
+    <button onclick="showCollectionPage()">📂 Collection</button>
+
     <script>
       function showCollectionPage() {
         const container = document.createElement("div");
@@ -47,26 +59,15 @@
               <div><p>room 6</p></div>
             </div>
 
-            <div class="footer">copyright and sources</div>
+            <div class="footer">© Thea Geonanga and Elay Mamaril</div>
           </div>
         `;
         document.body.appendChild(container);
       }
     </script>
-  </head>
-  <body>
-   <div class="audio-player">
-      <audio id="audio" controls>
-        <source src="https://raw.githubusercontent.com/rianneclemiel/audio-files/main/Once%20Upon%20a%20Dream.mp3
-        " type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>   
-    </div>
-    <button onclick="showCollectionPage()">📂 Collection</button>
+
+    <footer>
+      © Thea Geonanga and Elay Mamaril<br/>
+    </footer>
   </body>
-  <footer>
-    © Thea Geonanga and Elay Mamaril<br/>
-  </footer>
 </html>
-
-
