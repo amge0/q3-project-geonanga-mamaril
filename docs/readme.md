@@ -7,7 +7,7 @@ Another type of update will be the addition of two new pages: (1) _About the Cre
 1. About the Creators Page
 Type of data: Text
 Purpose: For users to familiarize with the creators of the site and understand the inspirations behind the project.
-![](About.png) 
+![](public/images/About.png) 
    
 2. Login/Signup & Theme Generator Page
 Type of data: Drag-and-drop
@@ -62,7 +62,7 @@ account {
 "password": text-string
 }
 
-![](LoginSignupTheme.png)
+![](public/images/LoginSignupTheme.png)
 
 3. Image sizing of existing photos
 Type of data: Image source
