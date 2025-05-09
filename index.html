@@ -12,16 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <style>
       body {
-        background-image: url('https://i.pinimg.com/736x/12/63/a9/1263a944c273ce91048355b916291b2f.jpg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-      }
-      .audio-player {
-        position: absolute;
-        top: 10px;
-        right: 10px;
+        font-family: 'Dancing Script', cursive;
+        margin: 0;
+        padding: 0;
       }
     </style>
   </head>
@@ -32,67 +25,64 @@
         <source src="https://raw.githubusercontent.com/rianneclemiel/audio-files/main/Once%20Upon%20a%20Dream.mp3" type="audio/mpeg">
       </audio>   
     </div>
-    
+
     <header id="header">
       <h2><i>Welcome to your</i></h2>
       <h1><b>COMFORT ZONE</b></h1>
       <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" width="100" height="100" alt="logo"><br/>
     </header>
-    
-    <p class="generator">
-      Choose your theme, serving as your template!<br/>
-      <select id="theme" name="theme" required>
-      <option value="Minimalist" selected> Minimalist </option>
-      <option value="Vintage"> Vintage </option>
-      <option value="Coastal"> Coastal </option>
-      <option value="LuxuryGlam"> Luxury Glam </option>
-      <option value="Futuristic"> Futuristic </option>
-      <option value="AnimePopCulture"> Anime/Pop Culture </option>
-      <option value="DarkAcademia"> Dark Academia </option>
-      <option value="Cottagecore"> Cottagecore </option>
-      <option value="FantasyFairyTale"> Fantasy/Fairy Tale </option>
-      <option value="Nature"> Nature </option>
-    </select>
-    </p>
 
-    <form action="/save" method="get" class="containter">
-    <p class="signup">
-      <b>Sign Up/Log In</b><br/><br/>
-      <label>Username
-        <input type="text" id="username" name="username" required>
-      </label><br/><br/>
-      
-      <label>Password
-        <input type="password" id="password" name="password" required>
-      </label><br/><br/>
-      
-      <button type="submit" name="action" value="save" onclick="return confirmchoice('save')">Save</button>
-      <button type="submit" name="action" value="edit" onclick="return edit">Edit</button>
-      <button type="submit" name="action" value="delete" onclick="return confirmchoice('delete')">Delete</button>
-    </p>
-    </form>
+    <div class="profile-container">
+      <div class="profile-box" id="generator">
+        <p><b>Choose your theme!</b></p>
+        <select id="theme" name="theme" required>
+          <option value="Minimalist" selected>Minimalist</option>
+          <option value="Vintage">Vintage</option>
+          <option value="Coastal">Coastal</option>
+          <option value="LuxuryGlam">Luxury Glam</option>
+          <option value="Futuristic">Futuristic</option>
+          <option value="AnimePopCulture">Anime/Pop Culture</option>
+          <option value="DarkAcademia">Dark Academia</option>
+          <option value="Cottagecore">Cottagecore</option>
+          <option value="FantasyFairyTale">Fantasy/Fairy Tale</option>
+          <option value="Nature">Nature</option>
+        </select>
+      </div>
 
-    <p id="webpages">
+      <div class="profile-box" id="signup">
+        <form class="container">
+          <p><b>Sign Up/Log In</b></p>
+          <label>Username<br/>
+            <input type="text" id="username" name="username" required>
+          </label><br/><br/>
+          <label>Password<br/>
+            <input type="password" id="password" name="password" required>
+          </label><br/><br/>
+          <button type="button" onclick="redirectToCustomize()">Save</button>
+          <button type="button" onclick="redirectToCustomize()">Edit</button>
+          <button type="button" onclick="redirectToCustomize()">Delete</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="webpages">
       <button type="button" onclick="window.location.href='customize.html'">🖌️ Customize</button><br /><br />
       <button type="button" onclick="window.location.href='bookmarks.html'">📌 Bookmarks</button><br/><br/>
       <button type="button" onclick="window.location.href='collections.html'">🗃️ Collections</button><br /><br />
-      <button type="button" onclick="window.location.href='drafts.html'">📄Drafts</button><br /><br />
+      <button type="button" onclick="window.location.href='drafts.html'">📄 Drafts</button><br /><br />
       <button type="button" onclick="window.location.href='about.html'">🌐 About the Creators</button>
-    </p>
+    </div>
+
+    <footer>
+      © Thea Geonanga and Elay Mamaril<br />
+      <a href="https://www.w3schools.com/tags/tag_button.asp">Button Docs</a> | 
+      <a href="https://www.w3schools.com/cssref/pr_class_display.php">CSS Display Docs</a>
+    </footer>
 
     <script>
-      function confirmchoice {
-        const message = action === 'delete' 
-      ? "Are you sure you want to delete this account?" 
-      : "Are you sure you want to save your information?";
-    return confirm(message); // If "OK", form submits. If "Cancel", it doesn't.
-      }
-
-      function edit {
-        document.getElementById("username").disabled = false;
-        document.getElementById("password").disabled = false;
+      function redirectToCustomize() {
+        window.location.href = "customize.html";
       }
     </script>
-    
   </body>
 </html>
