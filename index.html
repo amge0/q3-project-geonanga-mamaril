@@ -55,14 +55,18 @@
     </select>
     </p>
 
+    <form action="/save" method="get" class="containter">
     <p id="signup">
       <b>Sign Up/Log In</b><br/><br/>
+    </p>
       
-      Username<br/>
-      <input type="text" id="username" name="name"><br/><br/>
+      <label>Username
+        <input type="text" id="username" name="name">
+      </label><br/><br/>
       
-      Password<br/>
-      <input type="password" id="password"><br/><br/>
+      <label>Password
+        <input type="password" id="password">
+      </label><br/><br/>
       
       <button>
         Save
@@ -73,7 +77,33 @@
       <button>
         Delete
       </button>
-    </p>
+    </form>
 
+    <script>
+      function enable(ele, key) {
+        if (ele.innerHTML == "Save") {
+        if (confirm("Are you sure?"))
+          document.getElementById("form"+key).submit();
+        else {
+          const eleBtns = document.querySelectorAll(".editBtns")
+          for (let i = 0; i < eleBtns.length; i++) {
+            eleBtns[i].disabled = false;
+          }   
+          document.getElementById(key).disabled=true;
+          ele.innerHTML = "Edit";
+        }
+      }
+      else { // if it is an edit button enable score box and disable the other edit buttons
+        const eleBtns = document.querySelectorAll(".editBtns")
+        for (let i = 0; i < eleBtns.length; i++) {
+          eleBtns[i].disabled = true;
+        }   
+        document.getElementById(key).disabled=false;
+        ele.innerHTML = "Save";
+        ele.disabled=false;
+      }
+      }
+    </script>
+    
   </body>
 </html>
