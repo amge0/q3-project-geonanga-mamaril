@@ -14,18 +14,6 @@ h2 {
   font-weight: normal;
 }
 
-button {
-  font-family: 'Dancing Script', cursive;
-  font-size: 100%;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  transition: 500ms;
-  width: 100%;
-}
-
 #generator {
   height: 200%;
   width: 50%;
@@ -36,7 +24,7 @@ button {
   font-family: Noto Sans, sans-serif;
 }
 
-#theme {
+#theme, #username, #password {
   width: 100%;
 }
 
@@ -45,7 +33,7 @@ button {
   width: 50%;
   padding: 10px;
   display: table-cell;
-  text-align: center;
+  text-align: left;
   background-color: #8c8ba6;
   font-family: Noto Sans, sans-serif;
 }
