@@ -1,136 +1,148 @@
+body {
+  background-image: url("https://i.pinimg.com/736x/44/86/43/4486432dd1a99e7e6e4a3c42767f3334.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  color: #3a3a3a;
+}
+
 .topnav {
-  font-family: Noto Sans, sans-serif;
-  font-weight: normal;
-  background-color: #f4e3ff;
+  background-color: rgba(255, 240, 250, 0.9);
   overflow: hidden;
-  color: black;
   text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+  border-bottom: 2px solid #e0c4f3;
 }
 
 .topnav a {
   float: left;
-  color: #f4e3ff;
-  text-align: center;
-  padding: 14px 16px;
+  padding: 14px 20px;
   text-decoration: none;
-  font-size: 17px;
-  color: black;
+  font-size: 18px;
+  color: #70407c;
+  font-weight: bold;
 }
 
 .topnav a:hover {
-  background-color: #f4e3ff;
-  color: black;
-  font-weight: bold;
-}     
+  background-color: #f7d4f3;
+  color: #4b305f;
+}
 
-body {
-    background-image: url("https://i.pinimg.com/736x/44/86/43/4486432dd1a99e7e6e4a3c42767f3334.jpg");
-    background-size: cover;
-    background-position: center;
-}
-        .container {
-            width: 500px;
-            margin: auto;
-            padding: 20px;
-            background-color: #d3cfd6;
-            border-radius: 10px;
-            position: relative;
-        }
-        h1 {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .room {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            margin: 10px auto;
-            background-image: url('room-image.jpg');
-            background-size: cover;
-            background-position: center;
-            
-
-        }
-        .placed-image {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            cursor: grab;
-        }
-        .side-buttons {
-            position: absolute;
-            top: 120px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .left-buttons { left: 20px; width: 170 px; length: 70 px;}
-        .right-buttons { right: 20px; width: 170 px; length: 70 px; }
-        .button {
-            background-color: #eb428e;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 15px;
-            font-family: 'Dancing Script', cursive;
-        }
-        .bottom-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .control {
-            background-color: #fac8e1 ;
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            border: none;
-            font-size: 16px;
-            font-family: 'Dancing Script', cursive;
-        }
-        /* Pop-up selection panel */
-        .popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-            display: none;
-            z-index: 3;
-        }
-        .popup img {
-            width: 80px;
-            height: 80px;
-            margin: 10px;
-            cursor: pointer;
-        }
-        .popup button {
-            background: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .placed-image {
-  position: absolute;
-  width: 150px; /* Increased size */
-  height: 120px; /* Increased size */
-  cursor: grab;
-}
-.light-image {
-    width: 50px; /* Smaller size for lights */
-    height: 50px; /* Adjust height accordingly */
-    position: absolute;
-    top: 50px;
-    left: 50px;
-}
 .audio-player {
   position: absolute;
   top: 10px;
   right: 10px;
 }
+
+.button, .control {
+  background-color: #f9c8e5;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 17px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Dancing Script', cursive;
+  transition: background-color 0.3s;
+}
+
+.button:hover, .control:hover {
+  background-color: #f4a4d1;
+}
+
+.side-buttons {
+  position: absolute;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.left-buttons {
+  left: 20px;
+}
+
+.right-buttons {
+  right: 20px;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.room {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.placed-image {
+  position: absolute;
+  width: 140px;
+  height: 110px;
+  cursor: grab;
+}
+
+.light-image {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff0fb;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+  display: none;
+  z-index: 10;
+  text-align: center;
+}
+
+.popup img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.popup img:hover {
+  transform: scale(1.1);
+}
+
+.popup button {
+  background: #eb428e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin: 20px 0;
+  color: #5f5f5f;
+  font-family: 'Noto Sans', sans-serif;
+}
+
