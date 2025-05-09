@@ -9,53 +9,52 @@
     <title>Bookmarks | Comfort Zone</title>
     <link href="bookmarks_style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" type="image/x-icon"/>
-  
-  <div class="topnav">
-    <a class="active" href="index.html">Login</a>
-    <a href="home.html">Home</a>
-    <a href="collections.html">Collections</a>
-    <a href="customize.html">Customize</a>
-    <a href="drafts.html">Drafts</a>
-    <a href="about.html">About Us</a>
-  </div>
-    
-  <script>
-    function showBookmarksPage() {
-      const container = document.createElement("div");
+    <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="topnav">
+      <a class="active" href="index.html">Login</a>
+      <a href="home.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="customize.html">Customize</a>
+      <a href="drafts.html">Drafts</a>
+      <a href="about.html">About Us</a>
+    </div>
+
+    <div class="audio-player">
+      <audio id="audio" controls>
+        <source src="https://raw.githubusercontent.com/rianneclemiel/audio-files/main/Once%20Upon%20a%20Dream.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>   
+    </div>
+
+    <button onclick="showBookmarksPage()">📌 Bookmarks</button>
+
+    <script>
+      function showBookmarksPage() {
+        const container = document.createElement("div");
         container.innerHTML = `
           <header>
             COMFORT ZONE<br />
             <span style="font-size: 16px;">Featured rooms</span>
           </header>
-          
-        
-          
+
           <div class="image-grid">
               <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/room1.jpg?v=1737641388373" width="200" height="200" alt="Zoomable Image" class="zoomable">
               <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/room3.jpg?v=1737641564335" width="200" height="200" alt="Zoomable Image" class="zoomable">
               <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/room2.jpg?v=1737641559432" width="200" height="200" alt="Zoomable Image" class="zoomable">
               <img src="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/room4.jpg?v=1737642005105" width="200" height="200" alt="Zoomable Image" class="zoomable">
-              
-            </div>
-
-            <div class="footer">copyright and sources</div>
           </div>
-          `;
+
+          <div class="footer">© Thea Geonanga and Elay Mamaril</div>
+        `;
         document.body.appendChild(container);
-    }
-  </script>
-    </head>
-  <body>
-    <div class="audio-player">
-      <audio id="audio" controls>
-        <source src="https://raw.githubusercontent.com/rianneclemiel/audio-files/main/Once%20Upon%20a%20Dream.mp3
-        " type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>   
-    </div>
-    <button onclick="showBookmarksPage()">📌 Bookmarks</button>
+      }
+    </script>
+    
+    <footer>
+      © Thea Geonanga and Elay Mamaril<br/>
+    </footer>
   </body>
-  <footer>
-    © Thea Geonanga and Elay Mamaril<br/>
-  </footer>
 </html>
