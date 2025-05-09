@@ -1,154 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comfort Zone</title>
-    <link href="customize_style.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" type="image/x-icon"/>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comfort Zone</title>
+  <link href="customize_style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="audio-player">
-        <audio id="audio" controls>
-          <source src="https://raw.githubusercontent.com/rianneclemiel/audio-files/main/Once%20Upon%20a%20Dream.mp3
-          " type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>   
-      </div>
-    
-    <div class="topnav">
-    <a class="active" href="index.html">Login</a>
+  <div class="audio-player">
+    <audio id="audio" controls>
+      <source src="https://raw.githubusercontent.com/rianneclemiel/audio-files/main/Once%20Upon%20a%20Dream.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="topnav">
+    <a href="index.html">Login</a>
     <a href="home.html">Home</a>
     <a href="bookmarks.html">Bookmarks</a>
     <a href="collections.html">Collections</a>
     <a href="drafts.html">Drafts</a>
     <a href="about.html">About Us</a>
   </div>
-        
-        <!-- Left Buttons -->
-        <div class="side-buttons left-buttons">
-            <button class="button" onclick="openPopup('furnitures')">Furnitures</button>
-            <button class="button" onclick="openPopup('lights')">Lights</button>
-        </div>
 
-       
+  <!-- Side Buttons -->
+  <div class="side-buttons left-buttons">
+    <button class="button" onclick="openPopup('furnitures')">Furnitures</button>
+    <button class="button" onclick="openPopup('lights')">Lights</button>
+  </div>
 
-        <!-- Right Buttons -->
-        <div class="side-buttons right-buttons">
-            <button class="button" onclick="openPopup('decoration')">Decoration</button>
-            <button class="button">Shape/size</button>
-        </div>
+  <div class="side-buttons right-buttons">
+    <button class="button" onclick="openPopup('decoration')">Decoration</button>
+    <button class="button">Shape/Size</button>
+  </div>
 
-        <!-- Bottom Buttons -->
-        <div class="bottom-buttons">
-            <button class="control">Bookmark</button>
-            <button class="control">Description</button>
-            <button class="control">Rotate/move</button>
-        </div>
-        <div class="bottom-buttons">
-            <button class="control" onclick="clearImages()">Delete</button>
-            <button class="control" onclick="saveLayout()">Save</button>
-        </div>
-    </div>
+  <!-- Bottom Buttons -->
+  <div class="bottom-buttons">
+    <button class="control">Bookmark</button>
+    <button class="control">Description</button>
+    <button class="control">Rotate/Move</button>
+  </div>
+  <div class="bottom-buttons">
+    <button class="control" onclick="clearImages()">Delete</button>
+    <button class="control" onclick="saveLayout()">Save</button>
+  </div>
 
-    <!-- Pop-up selection panel -->
-    <div id="popup" class="popup">
-        <h3>Select an Image</h3>
-        <div id="popup-content"></div>
-        <button onclick="closePopup()">Close</button>
-    </div>
-  
+  <!-- Pop-up Selection Panel -->
+  <div id="popup" class="popup">
+    <h3>Select an Image</h3>
+    <div id="popup-content"></div>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
   <div class="room" id="room">
-    <div class="room" id="room">
-    <img src="room.jpg" width="300" height="300" class="background-image"></div>
+    <img src="room.jpg" width="300" height="300" class="background-image" />
+  </div>
+
+  <footer>
+    © Thea Geonanga and Elay Mamaril<br/>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", loadSavedImages);
+
+    const imageCategories = {
+      furnitures: ["furniture1.png", "furniture2.png", "furniture3.png", "furniture4.png", "furniture5.png", "furniture6.png", "furniture7.png", "furniture8.png", "furniture9.png", "furniture11.png", "furniture12.png", "furniture13.png"],
+      lights: ["light1.png", "light2.png", "light3.png", "light4.png"],
+      decoration: ["deco1.png", "deco2.png", "deco3.png", "deco4.png", "deco5.png", "deco6.png", "deco7.png"]
+    };
+
+    function openPopup(category) {
+      const popup = document.getElementById('popup');
+      const popupContent = document.getElementById('popup-content');
+      popupContent.innerHTML = '';
+
+      imageCategories[category].forEach(imageSrc => {
+        let img = document.createElement('img');
+        img.src = imageSrc;
+        img.onclick = () => { addImage(imageSrc); closePopup(); };
+        popupContent.appendChild(img);
+      });
+
+      popup.style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    function addImage(imageSrc, left = 50, top = 50) {
+      let room = document.getElementById('room');
+      let img = document.createElement('img');
+      img.src = imageSrc;
+      img.classList.add('placed-image');
+      img.style.left = left + "px";
+      img.style.top = top + "px";
+      img.draggable = true;
+
+      img.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', '');
+        img.style.position = 'absolute';
+      });
+
+      img.addEventListener('dragend', (e) => {
+        img.style.left = `${e.pageX - room.offsetLeft - 30}px`;
+        img.style.top = `${e.pageY - room.offsetTop - 30}px`;
+      });
+
+      room.appendChild(img);
+    }
+
+    function clearImages() {
+      document.getElementById('room').innerHTML = '';
+      localStorage.removeItem('savedLayout');
+    }
+
+    function saveLayout() {
+      let images = document.querySelectorAll('.placed-image');
+      let savedData = [];
+
+      images.forEach(img => {
+        savedData.push({
+          src: img.src,
+          left: img.style.left,
+          top: img.style.top
+        });
+      });
+
+      localStorage.setItem('savedLayout', JSON.stringify(savedData));
+      alert("Layout Saved!");
+    }
+
+    function loadSavedImages() {
+      let savedLayout = localStorage.getItem('savedLayout');
+
+      if (savedLayout) {
+        let images = JSON.parse(savedLayout);
+        images.forEach(imgData => {
+          addImage(imgData.src, parseInt(imgData.left), parseInt(imgData.top));
+        });
+      }
+    }
+  </script>
 </body>
-    
-    <footer>
-        © Thea Geonanga and Elay Mamaril<br/>
-    </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", loadSavedImages);
-
-        const imageCategories = {
-            furnitures: ["furniture1.png", "furniture2.png", "furniture3.png", "furniture4.png", "furniture5.png", "furniture6.png", "furniture7.png", "furniture8.png", "furniture9.png", "furniture11.png", "furniture12.png", "furniture13.png"],
-            lights: ["light1.png", "light2.png", "light3.png", "light4.png"],
-            decoration: ["deco1.png", "deco2.png", "deco3.png", "deco4.png", "deco5.png", "deco6.png", "deco7.png"]
-        };
-
-        function openPopup(category) {
-            const popup = document.getElementById('popup');
-            const popupContent = document.getElementById('popup-content');
-            popupContent.innerHTML = '';
-
-            imageCategories[category].forEach(imageSrc => {
-                let img = document.createElement('img');
-                img.src = imageSrc;
-                img.onclick = () => { addImage(imageSrc); closePopup(); };
-                popupContent.appendChild(img);
-            });
-
-            popup.style.display = 'block';
-        }
-
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
-
-        function addImage(imageSrc, left = 50, top = 50) {
-            let room = document.getElementById('room');
-            let img = document.createElement('img');
-            img.src = imageSrc;
-            img.classList.add('placed-image');
-            img.style.left = left + "px";
-            img.style.top = top + "px";
-            img.draggable = true;
-
-            img.addEventListener('dragstart', (e) => {
-                e.dataTransfer.setData('text/plain', '');
-                img.style.position = 'absolute';
-            });
-
-            img.addEventListener('dragend', (e) => {
-                img.style.left = `${e.pageX - room.offsetLeft - 30}px`;
-                img.style.top = `${e.pageY - room.offsetTop - 30}px`;
-            });
-
-            room.appendChild(img);
-        }
-
-        function clearImages() {
-            document.getElementById('room').innerHTML = '';
-            localStorage.removeItem('savedLayout'); // Clear saved images
-        }
-
-        function saveLayout() {
-            let images = document.querySelectorAll('.placed-image');
-            let savedData = [];
-
-            images.forEach(img => {
-                savedData.push({
-                    src: img.src,
-                    left: img.style.left,
-                    top: img.style.top
-                });
-            });
-
-            localStorage.setItem('savedLayout', JSON.stringify(savedData));
-            alert("Layout Saved!");
-        }
-
-        function loadSavedImages() {
-            let savedLayout = localStorage.getItem('savedLayout');
-
-            if (savedLayout) {
-                let images = JSON.parse(savedLayout);
-                images.forEach(imgData => {
-                    addImage(imgData.src, parseInt(imgData.left), parseInt(imgData.top));
-                });
-            }
-        }
-    </script>
 </html>
-
