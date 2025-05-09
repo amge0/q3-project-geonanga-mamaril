@@ -1,55 +1,55 @@
+@import url('https://fonts.cdnfonts.com/css/public-pixel');
+
 body {
+  font-family: 'Public Pixel', sans-serif;
   background-image: url("https://i.pinimg.com/736x/44/86/43/4486432dd1a99e7e6e4a3c42767f3334.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   margin: 0;
-  font-family: 'Dancing Script', cursive;
-  color: #3a3a3a;
+  padding: 0;
+  color: black;
 }
 
 .topnav {
-  background-color: rgba(255, 240, 250, 0.9);
+  background-color: #f4e3ff;
   overflow: hidden;
   text-align: center;
-  font-family: 'Noto Sans', sans-serif;
-  border-bottom: 2px solid #e0c4f3;
 }
 
 .topnav a {
   float: left;
-  padding: 14px 20px;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 18px;
-  color: #70407c;
-  font-weight: bold;
+  font-size: 17px;
+  color: black;
 }
 
 .topnav a:hover {
-  background-color: #f7d4f3;
-  color: #4b305f;
+  background-color: #f4e3ff;
+  font-weight: bold;
 }
 
-.audio-player {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.button, .control {
-  background-color: #f9c8e5;
-  padding: 10px 16px;
-  border: none;
-  cursor: pointer;
+.container {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  background-color: #d3cfd6;
   border-radius: 10px;
-  font-size: 17px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  font-family: 'Dancing Script', cursive;
-  transition: background-color 0.3s;
+  position: relative;
 }
 
-.button:hover, .control:hover {
-  background-color: #f4a4d1;
+.room {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 10px auto;
+}
+
+.placed-image {
+  position: absolute;
+  width: 150px;
+  height: 120px;
+  cursor: grab;
 }
 
 .side-buttons {
@@ -57,39 +57,65 @@ body {
   top: 120px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
-.left-buttons {
-  left: 20px;
-}
+.left-buttons { left: 20px; }
+.right-buttons { right: 20px; }
 
-.right-buttons {
-  right: 20px;
+.button {
+  background-color: #eb428e;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: 'Public Pixel', sans-serif;
 }
 
 .bottom-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-.room {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 20px auto;
-  border-radius: 15px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-  overflow: hidden;
+.control {
+  background-color: #fac8e1;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-family: 'Public Pixel', sans-serif;
 }
 
-.placed-image {
-  position: absolute;
-  width: 140px;
-  height: 110px;
-  cursor: grab;
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 3;
+}
+
+.popup img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.popup button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 .light-image {
@@ -100,49 +126,8 @@ body {
   left: 50px;
 }
 
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff0fb;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
-  display: none;
-  z-index: 10;
-  text-align: center;
+.audio-player {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
-
-.popup img {
-  width: 80px;
-  height: 80px;
-  margin: 10px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.popup img:hover {
-  transform: scale(1.1);
-}
-
-.popup button {
-  background: #eb428e;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-family: 'Dancing Script', cursive;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-footer {
-  text-align: center;
-  font-size: 14px;
-  margin: 20px 0;
-  color: #5f5f5f;
-  font-family: 'Noto Sans', sans-serif;
-}
-
