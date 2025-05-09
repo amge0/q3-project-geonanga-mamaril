@@ -37,7 +37,9 @@ body {
   z-index: 1000;
 }
 
-select, input[type="text"], input[type="password"] {
+select,
+input[type="text"],
+input[type="password"] {
   width: 90%;
   padding: 10px;
   margin: 10px 0;
@@ -45,6 +47,17 @@ select, input[type="text"], input[type="password"] {
   font-size: 16px;
   border: 2px solid #999;
   border-radius: 8px;
+}
+
+.signup label {
+  margin-bottom: 15px;
+  display: block;
+  font-size: 18px;
+}
+
+.signup input {
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 button {
@@ -57,6 +70,7 @@ button {
   margin: 5px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
@@ -64,7 +78,9 @@ button:hover {
   transform: scale(1.05);
 }
 
-.generator, .signup, #webpages {
+.generator,
+.signup,
+#webpages {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
   margin: 20px auto;
@@ -73,6 +89,12 @@ button:hover {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   font-family: 'Noto Sans', sans-serif;
   text-align: center;
+}
+
+.generator label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
 }
 
 form {
@@ -91,3 +113,4 @@ footer {
   font-family: 'Noto Sans', sans-serif;
   margin-top: 30px;
 }
+
