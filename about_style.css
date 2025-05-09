@@ -1,64 +1,73 @@
-#header {
-  text-align: center;
-  line-height: 5px;
-}
-
-h1 {
-  font-family: Helvetica, serif;
-  font-size: 300%;
-  padding: 10px;
-}
-
-h2 {
-  font-family: Noto Sans, sans-serif;
-  font-weight: normal;
-}
-
-button {
-  font-family: 'Dancing Script', cursive;
-  font-size: 100%;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  transition: 500ms;
-  width: 100%;
-}
-
-#thea {
-  height: 200%;
-  width: 50%;
-  padding: 10px;
-  text-align: center;
-  display: table-cell;
-  background-color: #b6b7cf;
-  font-family: Noto Sans, sans-serif;
-}
-
-#elay {
-  height: 200%;
-  width: 50%;
-  padding: 10px;
-  display: table-cell;
-  text-align: center;
-  background-color: white;
-  font-family: Noto Sans, sans-serif;
-}
-
-footer {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  background-color: #a6a6a6;
-  font-size: 14px;
-  font-family: Noto Sans, sans-serif;
-}
 body {
   background-image: url('https://i.pinimg.com/736x/12/63/a9/1263a944c273ce91048355b916291b2f.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: 'Press Start 2P', cursive;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.audio-player {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+#header {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 20px;
+  border: 4px double #ff69b4;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 28px;
+  color: #ff1493;
+  margin-bottom: 10px;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 3px dashed #ffb6c1;
+  border-radius: 15px;
+  padding: 20px;
+  width: 40%;
+  margin: 10px;
+  min-width: 300px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-box h2 {
+  color: #db7093;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.profile-box ul {
+  list-style: none;
+  padding: 0;
+  line-height: 2;
+  font-size: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 10px;
+  background-color: rgba(255, 182, 193, 0.7);
+  margin-top: 30px;
+  border-top: 2px solid #ff69b4;
 }
