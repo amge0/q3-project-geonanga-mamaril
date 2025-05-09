@@ -2,22 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Comfort Zone</title>
+
+  <!-- Pixel Font -->
+  <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet" />
+  
+  <!-- Styles -->
   <link href="customize_style.css" rel="stylesheet" type="text/css" />
   <link rel="icon" href="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" type="image/x-icon"/>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="audio-player">
     <audio id="audio" controls>
       <source src="https://raw.githubusercontent.com/rianneclemiel/audio-files/main/Once%20Upon%20a%20Dream.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
-    </audio>
+    </audio>   
   </div>
 
   <div class="topnav">
-    <a href="index.html">Login</a>
+    <a class="active" href="index.html">Login</a>
     <a href="home.html">Home</a>
     <a href="bookmarks.html">Bookmarks</a>
     <a href="collections.html">Collections</a>
@@ -25,29 +29,30 @@
     <a href="about.html">About Us</a>
   </div>
 
-  <!-- Side Buttons -->
+  <!-- Left Buttons -->
   <div class="side-buttons left-buttons">
     <button class="button" onclick="openPopup('furnitures')">Furnitures</button>
     <button class="button" onclick="openPopup('lights')">Lights</button>
   </div>
 
+  <!-- Right Buttons -->
   <div class="side-buttons right-buttons">
     <button class="button" onclick="openPopup('decoration')">Decoration</button>
-    <button class="button">Shape/Size</button>
+    <button class="button">Shape/size</button>
   </div>
 
   <!-- Bottom Buttons -->
   <div class="bottom-buttons">
     <button class="control">Bookmark</button>
     <button class="control">Description</button>
-    <button class="control">Rotate/Move</button>
+    <button class="control">Rotate/move</button>
   </div>
   <div class="bottom-buttons">
     <button class="control" onclick="clearImages()">Delete</button>
     <button class="control" onclick="saveLayout()">Save</button>
   </div>
 
-  <!-- Pop-up Selection Panel -->
+  <!-- Pop-up selection panel -->
   <div id="popup" class="popup">
     <h3>Select an Image</h3>
     <div id="popup-content"></div>
@@ -55,7 +60,7 @@
   </div>
 
   <div class="room" id="room">
-    <img src="room.jpg" width="300" height="300" class="background-image" />
+    <img src="room.jpg" width="300" height="300" class="background-image">
   </div>
 
   <footer>
