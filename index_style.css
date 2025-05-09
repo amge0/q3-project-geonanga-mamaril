@@ -1,49 +1,77 @@
 #header {
   text-align: center;
   line-height: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #999;
+  font-family: 'Dancing Script', cursive;
 }
 
 h1 {
-  font-family: Helvetica, serif;
   font-size: 300%;
   padding: 10px;
 }
 
 h2 {
-  font-family: Noto Sans, sans-serif;
   font-weight: normal;
+  font-size: 150%;
 }
 
-#generator {
-  height: 200%;
-  width: 50%;
+body {
+  background-image: url('https://i.pinimg.com/736x/12/63/a9/1263a944c273ce91048355b916291b2f.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Dancing Script', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.audio-player {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+select, input[type="text"], input[type="password"] {
+  width: 90%;
   padding: 10px;
-  text-align: center;
-  display: table-cell;
-  background-color: #b6b7cf;
-  font-family: Noto Sans, sans-serif;
+  margin: 10px 0;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  border: 2px solid #999;
+  border-radius: 8px;
 }
 
-#theme, #username, #password {
-  width: 100%;
+button {
+  font-family: 'Dancing Script', cursive;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-#signup {
-  height: 200%;
-  width: 50%;
-  padding: 10px;
-  display: table-cell;
-  text-align: left;
-  background-color: #8c8ba6;
-  font-family: Noto Sans, sans-serif;
+button:hover {
+  background-color: #d8d8d8;
+  transform: scale(1.05);
 }
 
-#webpages {
-  width: 100%;
-  display: table-cell;
-  text-align: center;
-  background-color: white;
-  font-family: Noto Sans, sans-serif;
+.generator, .signup, #webpages {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Noto Sans', sans-serif;
 }
 
 footer {
@@ -53,12 +81,6 @@ footer {
   padding: 10px;
   background-color: #a6a6a6;
   font-size: 14px;
-  font-family: Noto Sans, sans-serif;
-}
-body {
-  background-image: url('https://i.pinimg.com/736x/12/63/a9/1263a944c273ce91048355b916291b2f.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  font-family: 'Noto Sans', sans-serif;
+  margin-top: 30px;
 }
