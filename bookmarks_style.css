@@ -1,120 +1,89 @@
+@import url('https://fonts.cdnfonts.com/css/public-pixel');
+
 * {
   background: #e0dfe8;
+  font-family: 'Public Pixel', sans-serif;
 }
 
 .topnav {
-  font-family: Noto Sans, sans-serif;
-  font-weight: normal;
   background-color: #f4e3ff;
   overflow: hidden;
-  color: black;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .topnav a {
   float: left;
-  color: #f4e3ff;
-  text-align: left;
+  color: black;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  color: black;
 }
 
 .topnav a:hover {
-  background-color: #f4e3ff;
-  color: black;
+  background-color: #fad7f6;
   font-weight: bold;
 }
 
 button {
-  font-family: Noto Sans, sans-serif;
-  font-size: 100%;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  transition: 500ms;
-  width: 100%;
+  font-family: 'Public Pixel', sans-serif;
+  font-size: 14px;
+  background: #f4e3ff;
+  border: 2px solid #000000;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px #999;
 }
 
 body {
-  font-family: Times New Roman, sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #E6E6FA;
-  
-  /* Add background image */
+  text-align: center;
+  background-color: #e6e6fa;
   background-image: url('https://i.pinimg.com/736x/27/25/2b/27252b5b8bcce801cc8832ed2318ecf8.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
 }
-      
+
 header {
-  font-family: Helvetica, serif;
-  font-size: 250%;
-  text-align: center;
+  font-size: 32px;
   font-weight: bold;
+  color: #333;
+  margin-top: 40px;
   margin-bottom: 20px;
-}
-      
-#main-container {
-  width: 80%;
-  text-align: left;
 }
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 20px;
-}
-      
-.image-grid div {
-  border: 2px solid black;
-  height: 100px;
-  width: 300px;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  gap: 10px;
-  margin-top: 20px;
-}
-      
-.featured-room {
-  border: 2px solid black;
-  height: 200px;
-  width: 500px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-}
-
-.footer {
-  font-family: Noto Sans, sans-serif;
-  font-weight: normal;
-  margin-top: 20px;
-  font-size: 12px;
-  color: gray;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px;
+  justify-items: center;
 }
 
 .zoomable {
   transition: transform 0.3s;
   cursor: pointer;
-  border-radius: 15px; /* Rounded borders */
+  border-radius: 10px;
+  border: 3px solid #000;
 }
 
 .zoomable:hover {
   transform: scale(1.5);
 }
+
+.footer {
+  font-size: 12px;
+  color: gray;
+  margin-top: 40px;
+}
+
 .audio-player {
   position: absolute;
-  top: 100px;
-  right: 0px;
+  top: 20px;
+  right: 20px;
 }
