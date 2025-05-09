@@ -1,56 +1,104 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Geonanga, Mamaril" />
-    <meta name="description" content="Comfort Zone is an online website that lets you use your creative and artistic thinking to create and name your own bedroom." />
-    <meta name="keywords" content="room decor, creative space, design game" />
-    <title>Comfort Zone</title>
-    <link href="home_style.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="https://cdn.glitch.global/6b8a38dd-767c-4b39-afc6-189690daa9db/Logo.png?v=1738284483044" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
-  </head>
+body {
+  background-image: url('https://i.pinimg.com/736x/12/63/a9/1263a944c273ce91048355b916291b2f.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Press Start 2P', cursive;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
-  <body>
-    <div class="audio-player">
-      <audio id="audio" controls>
-        <source src="https://raw.githubusercontent.com/rianneclemiel/audio-files/main/Once%20Upon%20a%20Dream.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+.audio-player {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
 
-    <header id="header">
-      <h1>Welcome to Comfort Zone</h1>
-      <p>Create and design your dream bedroom!</p>
-    </header>
+#header {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 20px;
+  border: 4px double #ff69b4;
+  border-radius: 10px;
+}
 
-    <div class="topnav">
-      <a href="home.html" class="active">Home</a>
-      <a href="customize.html">Customize</a>
-      <a href="bookmarks.html">Bookmarks</a>
-      <a href="collections.html">Collections</a>
-      <a href="drafts.html">Drafts</a>
-      <a href="socmed.html">Social Media</a>
-    </div>
+h1 {
+  font-size: 28px;
+  color: #ff1493;
+  margin-bottom: 10px;
+}
 
-    <div id="webpages">
-      <button type="button" onclick="window.location.href='customize.html'">🖌️ Customize</button><br /><br />
-      <button type="button" onclick="window.location.href='bookmarks.html'">📌 Bookmarks</button><br/><br/>
-      <button type="button" onclick="window.location.href='collections.html'">🗃️ Collections</button><br /><br />
-      <button type="button" onclick="window.location.href='drafts.html'">📄Drafts</button><br /><br />
-      <button type="button" onclick="window.location.href='socmed.html'">🌐 Social Media</button>
-    </div>
+p {
+  font-size: 18px;
+  color: #ff1493;
+}
 
-    <p id="description">
-      Comfort Zone is an online website that lets you use your creative and artistic thinking to create and name your own bedroom. You can add any furniture, item, and decoration, such as tables, plushies, and curtains. The room has a template, and all you need to do is design it to your personal taste using buttons that have the default design of the elements. You can customize the size and color of each element.<br /><br />
-      <b><i>Have fun making your comfy room! And yes, you can make more comfort zones!</i></b>
-    </p>
+.topnav {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: normal;
+  background-color: #f4e3ff;
+  overflow: hidden;
+}
 
-    <footer>
-      © Thea Geonanga and Elay Mamaril<br />
-      W3Schools.com. (n.d.-e). https://www.w3schools.com/tags/tag_button.asp<br />
-      W3Schools.com. (n.d.-f). https://www.w3schools.com/cssref/pr_class_display.php
-    </footer>
-  </body>
-</html>
+.topnav a {
+  float: left;
+  color: #000;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #f4e3ff;
+  font-weight: bold;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.button-container {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+button {
+  font-family: 'Dancing Script', cursive;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#description {
+  width: 50%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  font-family: 'Press Start 2P', cursive;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 10px;
+  background-color: rgba(255, 182, 193, 0.7);
+  margin-top: 30px;
+  border-top: 2px solid #ff69b4;
+}
