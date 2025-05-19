@@ -6,16 +6,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
-
-// View engine setup
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'views'));
-
-// Route to render a page (make sure views/index.hbs exists)
-app.get('/some-page', (req, res) => {
-  res.render('index'); // not index.html
-});
+app.use(express.static('public')); // Serve index.html and static assets
 
 // Data file setup
 const usersFilePath = path.join(__dirname, 'data', 'users.json');
@@ -28,67 +19,69 @@ if (!fs.existsSync(usersFilePath)) {
   fs.writeFileSync(usersFilePath, '{}');
 }
 
-// Main route - Add user
+// Home route - Add user from query and serve index.html
 app.get('/', (req, res) => {
   try {
     const users = JSON.parse(fs.readFileSync(usersFilePath));
-    let user = req.query;
-    users[user.username] = {
-      username: user.username,
-      password: user.password
-    };
+    const user = req.query;
 
-    console.log('Saving updated user data...');
-    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-    console.log('User data saved successfully');
+    // Only save if username and password provided
+    if (user.username && user.password) {
+      users[user.username] = {
+        username: user.username,
+        password: user.password
+      };
 
-    res.redirect('/');
+      fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
+      console.log('User added:', user.username);
+    }
+
+    // Serve the static index.html file
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
   } catch (error) {
-    console.error('Error reading users file:', error);
-    res.status(500).send('Error loading user data');
+    console.error('Error handling user data:', error);
+    res.status(500).send('Internal Server Error');
   }
 });
 
 // Edit user scores
 app.get('/edit', (req, res) => {
   try {
-    const leadboard = JSON.parse(fs.readFileSync(usersFilePath));
-    let user = req.query;
-    for (let key in user) {
-      leadboard[key].score = Number(user[key]);
+    const leaderboard = JSON.parse(fs.readFileSync(usersFilePath));
+    const updates = req.query;
+
+    for (let key in updates) {
+      if (leaderboard[key]) {
+        leaderboard[key].score = Number(updates[key]);
+      }
     }
 
-    console.log('Saving updated user data...');
-    fs.writeFileSync(usersFilePath, JSON.stringify(leadboard, null, 2));
-    console.log('User data saved successfully');
-
+    fs.writeFileSync(usersFilePath, JSON.stringify(leaderboard, null, 2));
     res.redirect('/');
   } catch (error) {
-    console.error('Error reading users file:', error);
-    res.status(500).send('Error loading user data');
+    console.error('Error editing user scores:', error);
+    res.status(500).send('Internal Server Error');
   }
 });
 
 // Delete user
 app.get('/delete', (req, res) => {
   try {
-    const leadboard = JSON.parse(fs.readFileSync(usersFilePath));
-    let user = req.query;
-    for (let key in user) {
-      delete leadboard[key];
+    const leaderboard = JSON.parse(fs.readFileSync(usersFilePath));
+    const toDelete = req.query;
+
+    for (let key in toDelete) {
+      delete leaderboard[key];
     }
 
-    console.log('Saving updated user data...');
-    fs.writeFileSync(usersFilePath, JSON.stringify(leadboard, null, 2));
-    console.log('User data saved successfully');
-
+    fs.writeFileSync(usersFilePath, JSON.stringify(leaderboard, null, 2));
     res.redirect('/');
   } catch (error) {
-    console.error('Error reading users file:', error);
-    res.status(500).send('Error loading user data');
+    console.error('Error deleting user:', error);
+    res.status(500).send('Internal Server Error');
   }
 });
 
 // Start server
 const port = 3000;
-app.listen(port, () => console.log(`App listening to port ${port}`));
+app.listen(port, () => console.log(`Server running at http://127.0.0.1:${port}`));
